@@ -1,7 +1,7 @@
 <script setup>
-import PageHeader from './components/PageHeader.vue';
-import PageMain from './components/PageMain.vue';
-import PageFooter from './components/PageFooter.vue';
+import PageHeader from './components/PageHeader.vue'
+import PageMain from './components/PageMain.vue'
+import PageFooter from './components/PageFooter.vue'
 </script>
 
 <template>
@@ -9,4 +9,3 @@ import PageFooter from './components/PageFooter.vue';
   <PageMain></PageMain>
   <PageFooter></PageFooter>
 </template>
-

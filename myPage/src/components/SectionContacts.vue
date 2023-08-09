@@ -7,7 +7,7 @@
     </p>
     <ul class="contacts__list">
       <li class="contacts__item contacts__item_tme">
-        <a href="" class="contacts__link">
+        <a href="https://t.me/Toi_toi" class="contacts__link">
           <span class="contacts__img">
             <svg
               width="48"
@@ -170,7 +170,10 @@
 .contacts__link:hover svg path {
     fill: var(--color-9383B8);
 }
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
+    .contacts {
+        padding-top: 80px;
+    }
     .contacts__description {
         font-size: 28px;
     }
@@ -222,9 +225,13 @@
     }
 }
 @media (max-width:480px) {
+    .contacts {
+        padding-top: 60px;
+    }
     .contacts__list {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
+        margin-bottom: 16px;
     }
     .contacts__item_tme,
     .contacts__item_mail,
