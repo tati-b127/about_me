@@ -1,56 +1,63 @@
 <template>
-  <header class="header container">
-    <div class="header__logo">
-      <img src="@/assets/svg/logo.svg" alt="Logo Frontend Developer Tatyana Baranova" />
-    </div>
-    <nav class="header__nav">
-      <ul class="header__list">
-        <li class="header__item"><a href="#about-me" class="header__link">About me</a></li>
-        <li class="header__item"><a href="#portfolio" class="header__link">Portfolio</a></li>
-        <li class="header__item"><a href="#contacts" class="header__link">Contacts</a></li>
-      </ul>
-    </nav>
-    <div class="header__burger burger">
-      <button class="burger__btn" :class="{ 'is-open': isOpen }" @click="showMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="burger__menu">
-        <ul class="burger__list">
-          <li class="burger__item">
-            <a href="#about-me" class="burger__link" @click="closeMenu">About me</a>
-          </li>
-          <li class="burger__item">
-            <a href="#portfolio" class="burger__link" @click="closeMenu">Portfolio</a>
-          </li>
-          <li class="burger__item">
-            <a href="#contacts" class="burger__link" @click="closeMenu">Contacts</a>
-          </li>
+  <header class="header">
+    <div class="container header__container">
+
+      <div class="header__logo">
+        <img src="@/assets/svg/logo.svg" alt="Logo Frontend Developer Tatyana Baranova" />
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item"><a href="#about-me" class="header__link">About me</a></li>
+          <li class="header__item"><a href="#portfolio" class="header__link">Portfolio</a></li>
+          <li class="header__item"><a href="#contacts" class="header__link">Contacts</a></li>
         </ul>
       </nav>
+      <div class="header__burger burger">
+        <button class="burger__btn" :class="{ 'is-open': isOpen }" @click="showMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="burger__menu">
+          <ul class="burger__list">
+            <li class="burger__item">
+              <a href="#about-me" class="burger__link" @click="closeMenu">About me</a>
+            </li>
+            <li class="burger__item">
+              <a href="#portfolio" class="burger__link" @click="closeMenu">Portfolio</a>
+            </li>
+            <li class="burger__item">
+              <a href="#contacts" class="burger__link" @click="closeMenu">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 </template>
 <script>
 import { defineComponent, ref, watch } from 'vue'
+const mql = window.matchMedia("(max-width: 410px)")
+console.log(mql)
 
 export default defineComponent({
   setup() {
     const isOpen = ref(false)
     const showMenu = () => {
       if (!isOpen.value) {
-        console.log(isOpen)
         isOpen.value = true
-        console.log(isOpen)
+        console.log(window.matchMedia("(max-width: 410px)").matches)
+        if (window.matchMedia("(max-width: 410px)").matches) {
+        document.body.style.overflowY = 'hidden'
+      } 
       } else if (isOpen.value) {
-        console.log(isOpen)
         isOpen.value = false
-        console.log(isOpen)
+        document.body.style.overflowY = 'auto'
       }
     }
     const closeMenu = () => {
       isOpen.value = false
+      document.body.style.overflowY = 'auto'
     }
     watch(isOpen, (value) => {
       isOpen.value = value
@@ -106,7 +113,7 @@ export default defineComponent({
   /* width: 300px; */
   width: 64vw;
   height: 600px;
-  top: 62px;
+  top: 64px;
   right: -40px;
   padding: 80px 60px;
   transition: transform 0.5s ease-in-out;
@@ -126,13 +133,15 @@ export default defineComponent({
   color: var(--color-white);
 }
 .header {
-  min-height: 110px;
   padding-top: 40px;
   padding-bottom: 40px;
+  border-bottom: 1px solid var(--color-white);
+  max-height: 120px;
+}
+.header__container{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--color-white);
 }
 .header__logo {
   margin-right: 60px;
@@ -227,7 +236,7 @@ export default defineComponent({
   }
   .burger__menu {
     width: 100vw;
-    height: 420px;
+    height: calc(100vh - 60px);
     padding: 60px 40px;
   }
 }
@@ -239,7 +248,7 @@ export default defineComponent({
     padding-bottom: 12px;
   }
   .burger__menu {
-    top: 47px;
+    top: 48px;
     height: calc(100vh - 60px);
     /* right: 40px; */
   }

@@ -1,16 +1,19 @@
 <template>
   <section class="about-me container" id="about-me">
     <div class="about-me__block">
-      <h1 class="about-me__title">Hi! <br />I’m Tatyana Baranova,</h1>
+      <h1 class="about-me__title"></h1>
       <h2 class="about-me__descr">
-        an aspiring frontend developer with a strong visual sense and a passion for creating
-        user-friendly interfaces. Continuously seeking new and innovative solutions, I actively
-        explore external libraries and integrate AI, including GPT chat, into my projects.
       </h2>
+      
     </div>
   </section>
 </template>
 <style type="text/css">
+:root {
+  --ease-cb: cubic-bezier(.19,1,.22,1);
+  --delay-time: 1.5s
+}
+
 .about-me {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -21,13 +24,14 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left top;
+  
 }
 .about-me__block {
+  padding-top: 150px;
   grid-column: 3 / span 4;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
   max-width: 950px;
 }
 .about-me__title {
@@ -63,12 +67,14 @@
     font-size: 22px;
   }
 }
-/* @media (max-width: 680px) {
-    
-} */
+@media (max-width: 768px) {
+  .about-me__block {
+    padding-top: 70px;
+  }
+}
 @media (max-width: 520px) {
   .about-me {
-    padding-top: 30px;
+    padding-top: 60px;
     padding-bottom: 60px;
     min-height: 420px;
     max-height: 420px;
@@ -80,14 +86,13 @@
     font-size: 18px;
   }
   .about-me__block {
+    padding-top: 0;
     grid-column: 2 / span 5;
   }
 }
 @media (max-width: 380px) {
   .about-me {
-    /* padding-top: 50px; */
     padding-bottom: 30px;
-    /* background-size: cover; */
   }
   .about-me__title {
     font-size: 28px;

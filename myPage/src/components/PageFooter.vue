@@ -1,8 +1,22 @@
 <template>
-  <footer class="footer container">
-    <div class="footer__descr">Designed by Tatyana Baranova &copy;<span>2023</span></div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__descr">Designed by Tatyana Baranova &copy;<span>2023-{{currentYear}}</span></div>
+    </div>
   </footer>
 </template>
+<script>
+import { defineComponent } from 'vue';
+
+  export default defineComponent({
+    setup() {
+      const currentYear = new Date().getFullYear();
+      return {
+        currentYear,
+      }
+    }
+  })
+</script>
 <style>
 .footer {
   padding-top: 80px;

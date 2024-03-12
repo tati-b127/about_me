@@ -83,7 +83,7 @@
         </a>
       </li>
       <li class="contacts__item contacts__item_gh">
-        <a href="" class="contacts__link">
+        <a href="https://github.com/tati-b127" class="contacts__link">
           <span class="contacts__img">
             <svg
               width="48"
