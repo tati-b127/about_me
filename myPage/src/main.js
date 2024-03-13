@@ -27,8 +27,8 @@ gsap.defaults({ ease: 'none' })
 const tl1 = gsap.timeline({ repeat: 0 })
 tl1.to(aboutMeTitle, { duration: 1, text: 'Hi!<br/> I’m Tatyana Baranova,' })
 tl1.to(aboutMeDescr, {
-  duration: 6,
-  delay: 1,
+  duration: 5,
+  delay: 0.5,
   text: 'an aspiring Frontend Developer with a strong visual sense and a passion for creating  user-friendly interfaces. Continuously seeking new and innovative solutions, I actively  explore external libraries and integrate AI, including GPT chat, into my projects.'
 })
 const tlSkills = gsap.timeline({
@@ -38,7 +38,7 @@ const tlSkills = gsap.timeline({
     end: 'bottom +=500',
     scrub: 1,
     pin: true,
-    markers: true,
+    // markers: true,
     animation: 'Tween'
   }
 })
@@ -52,30 +52,29 @@ const tlPort = gsap.timeline({
   }
 })
 
-// if (window.matchMedia("(max-width: 560px)").matches) {
-// анимация портфолио
-// }
-
-gsap.utils.toArray('.portfolio__item:nth-child(even)').forEach((item) => {
-  tlPort.fromTo(
-    item,
-    {
-      xPercent: 5
-    },
-    { xPercent: 0 },
-    0
-  )
-})
-gsap.utils.toArray('.portfolio__item:nth-child(odd)').forEach((item) => {
-  tlPort.fromTo(
-    item,
-    {
-      xPercent: -5
-    },
-    { xPercent: 0 },
-    0
-  )
-})
+if (!window.matchMedia('(max-width: 560px)').matches) {
+  // анимация портфолио
+  gsap.utils.toArray('.portfolio__item:nth-child(even)').forEach((item) => {
+    tlPort.fromTo(
+      item,
+      {
+        xPercent: 8
+      },
+      { xPercent: -2 },
+      0
+    )
+  })
+  gsap.utils.toArray('.portfolio__item:nth-child(odd)').forEach((item) => {
+    tlPort.fromTo(
+      item,
+      {
+        xPercent: -8
+      },
+      { xPercent: 2 },
+      0
+    )
+  })
+}
 
 let tl2 = gsap.timeline()
 tl2.to('.contacts__item', {

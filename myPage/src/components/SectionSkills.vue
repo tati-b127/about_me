@@ -98,7 +98,7 @@
   </section>
 </template>
 <style>
-@keyframes titleAnimation {
+/* @keyframes titleAnimation {
     0% {
       transform: translateY(-50px);
       opacity: 0;
@@ -124,7 +124,7 @@
       clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
     
   }
-}
+} */
 
 .skills {
     padding-top: 120px;
@@ -148,17 +148,41 @@
     line-height: 110%;
     color: var(--color-9383B8);
     font-weight: 300;
-    /* transform: scale(1); */
     padding: 20px 30px;
     cursor: pointer;
-    animation: titleAnimation 0.2s linear;
+    background: linear-gradient(60deg, var(--color-17134e), var(--color-9383B8), var(--color-412F74));
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    /* -webkit-text-fill-color: var(--color-9383B8); */
+    /* animation: titleAnimation 0.2s linear; */
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+@keyframes animate {
+  0% {
+    background-position: -1000%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+@keyframes animateHover {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 .skills__item:nth-child(3n) {
     background-color: var(--color-271939);
+    animation: animate 3s linear infinite 2s;
 }
 .skills__item:nth-child(2n) {
     background-color: var(--color-412F74);
+    animation: animateHover 3s linear infinite 3s;
 }
 .skills__item:hover,
 .skills__item:hover .skills__subtitle {
@@ -167,6 +191,8 @@
     transform: scale(1.1) !important;
     background-color: var(--color-9383B8);
     z-index: 1000;
+    /* animation: reverse; */
+    animation: animateHover 2s linear infinite;
 }
 
 @media (max-width: 1280px) {
