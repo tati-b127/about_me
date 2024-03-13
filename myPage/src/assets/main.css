@@ -12,6 +12,7 @@
 .container {
   max-width: 1920px;
   padding: 0 80px;
+  margin: 0 auto;
 }
 .title {
   font-size: 86px;
@@ -44,7 +45,6 @@
 .btn:hover {
   color: var(--color-white);
   background: var(--color-412F74);
-  /* border: 1px solid var(--color-white); */
 }
 
 @media (max-width: 1200px) {

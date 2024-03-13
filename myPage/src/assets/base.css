@@ -5,9 +5,10 @@
   --color-2A2A3C: #2a2a3c;
   --color-262425: #262425;
   --color-771A41: #771a41;
-  --color-2A2A3C: #2a2a3c;
   --color-412F74: #412f74;
   --color-9383B8: #9383b8;
+  --color-17134e: #17134e;
+  --color-271939: #271939;
   --color-border: var(--color-white);
 }
 
@@ -52,6 +53,8 @@
 }
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--color-9383B8) var(--color-2A2A3C);
+  scrollbar-width: thin;
 }
 h1,
 h2,
@@ -70,9 +73,11 @@ a {
 }
 body {
   min-width: 320px;
+  overflow-x: hidden;
   min-height: 100vh;
   color: var(--color-white);
   background: var(--color-background);
+  cursor: default;
   transition:
     color 0.3s ease-in,
     background-color 0.3s ease-in;

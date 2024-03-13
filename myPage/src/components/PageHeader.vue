@@ -38,7 +38,7 @@
 <script>
 import { defineComponent, ref, watch } from 'vue'
 const mql = window.matchMedia("(max-width: 410px)")
-console.log(mql)
+console.debug(mql)
 
 export default defineComponent({
   setup() {
@@ -171,6 +171,7 @@ export default defineComponent({
   line-height: 180%;
   font-weight: 300;
   color: var(--color-white);
+  transition: color 0.2s ease-in;
 }
 .header__link::after,
 .burger__link::after {
@@ -186,6 +187,7 @@ export default defineComponent({
 }
 .header__link:hover,
 .burger__link:hover {
+  color: var(--color-9383B8);
   background: transparent;
 }
 .header__link:hover::after,

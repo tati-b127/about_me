@@ -108,6 +108,7 @@
 <style type="text/css">
 .contacts {
     padding-top: 120px;
+    padding-bottom: 80px;
 }
 .contacts__description {
     font-size: 36px;
@@ -227,6 +228,7 @@
 @media (max-width:480px) {
     .contacts {
         padding-top: 60px;
+        padding-bottom: 0;
     }
     .contacts__list {
         grid-template-columns: 1fr;

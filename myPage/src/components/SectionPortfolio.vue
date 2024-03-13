@@ -217,6 +217,33 @@ export default defineComponent({
           </div>
         </div>
       </li>
+      <li class="portfolio__item portfolio__item_10" @click="showDetails">
+        <div class="portfolio__block">
+          <h3 class="portfolio__subtitle title-hidden">Online Shop Technozavrrr</h3>
+        </div>
+        <div class="portfolio__view" :class="{'move': onTouch}">
+          <h3 class="portfolio__subtitle">Online Shop Technozavrrr</h3>
+          <ul class="portfolio__stack-list">
+            <li class="portfolio__stack-item">Vue2</li>
+            <li class="portfolio__stack-item">Vue-router</li>
+            <li class="portfolio__stack-item">Vuex</li>
+          </ul>
+          <div class="portfolio__btns">
+            <a
+              href="https://tati-b127.github.io/technovavrrr/"
+              target="_blank"
+              class="portfolio__link btn"
+              >WEBSITE</a
+            >
+            <a
+              href="https://github.com/tati-b127/technovavrrr"
+              target="_blank"
+              class="portfolio__link btn"
+              >GITHUB</a
+            >
+          </div>
+        </div>
+      </li>
       <li class="portfolio__item portfolio__item_9" @click="showDetails">
         <div class="portfolio__block">
           <h3 class="portfolio__subtitle title-hidden">SPA STAR WARS</h3>
@@ -245,33 +272,6 @@ export default defineComponent({
         </div>
       </li>
 
-      <li class="portfolio__item portfolio__item_10" @click="showDetails">
-        <div class="portfolio__block">
-          <h3 class="portfolio__subtitle title-hidden">Online Shop Technozavrrr</h3>
-        </div>
-        <div class="portfolio__view" :class="{'move': onTouch}">
-          <h3 class="portfolio__subtitle">Online Shop Technozavrrr</h3>
-          <ul class="portfolio__stack-list">
-            <li class="portfolio__stack-item">Vue2</li>
-            <li class="portfolio__stack-item">Vue-router</li>
-            <li class="portfolio__stack-item">Vuex</li>
-          </ul>
-          <div class="portfolio__btns">
-            <a
-              href="https://tati-b127.github.io/technovavrrr/"
-              target="_blank"
-              class="portfolio__link btn"
-              >WEBSITE</a
-            >
-            <a
-              href="https://github.com/tati-b127/technovavrrr"
-              target="_blank"
-              class="portfolio__link btn"
-              >GITHUB</a
-            >
-          </div>
-        </div>
-      </li>
     </ul>
   </section>
 </template>
