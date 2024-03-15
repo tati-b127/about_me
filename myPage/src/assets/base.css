@@ -52,7 +52,7 @@
   margin: 0;
 }
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   scrollbar-color: var(--color-9383B8) var(--color-2A2A3C);
   scrollbar-width: thin;
 }

@@ -298,9 +298,6 @@ export default defineComponent({
 .move {
     transform: translateY(0);
 }
-.portfolio__view.move h3 {
-  transform: scale(1.1);
-}
 .portfolio__block {
   position: absolute;
   top: 70px;

@@ -46,7 +46,7 @@ export default defineComponent({
     const showMenu = () => {
       if (!isOpen.value) {
         isOpen.value = true
-        if (window.matchMedia("(max-width: 410px)").matches) {
+        if (window.matchMedia("(max-width: 520px)").matches) {
         document.body.style.overflowY = 'hidden'
       } 
       } else if (isOpen.value) {
@@ -109,8 +109,8 @@ export default defineComponent({
 }
 .burger__menu {
   position: absolute;
-  width: 64vw;
-  height: 600px;
+  width: 65vw;
+  height: 800px;
   top: 64px;
   right: -40px;
   padding: 80px 60px;
@@ -224,7 +224,9 @@ export default defineComponent({
 }
 @media (max-width: 768px) {
   .burger__menu {
+    height: 700px;
     right: -20px;
+    width: 70vw;
   }
 }
 @media (max-width: 520px) {
