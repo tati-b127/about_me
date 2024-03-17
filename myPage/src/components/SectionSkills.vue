@@ -178,11 +178,11 @@
 }
 .skills__item:nth-child(3n) {
     background-color: var(--color-271939);
-    animation: animate 3s linear infinite 2s;
+    animation: animate 2s linear infinite 2s;
 }
 .skills__item:nth-child(2n) {
     background-color: var(--color-412F74);
-    animation: animateHover 3s linear infinite 3s;
+    animation: animateHover 3s linear infinite 1s;
 }
 .skills__item:hover,
 .skills__item:hover .skills__subtitle {

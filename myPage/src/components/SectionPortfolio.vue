@@ -552,11 +552,6 @@ export default defineComponent({
     margin-bottom: 0;
   }
 }
-@media (max-width: 480px) {
-  .portfolio {
-    padding-top: 60px;
-  }
-}
 @media (max-width: 380px) {
   .portfolio__subtitle {
     font-size: 18px;

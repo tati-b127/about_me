@@ -5,7 +5,6 @@ import Vue3TouchEvents from 'vue3-touch-events'
 import App from './App.vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import GSDevTools from 'gsap/all'
 import Observer from 'gsap/Observer'
 import { MotionPathPlugin, TextPlugin } from 'gsap/all'
@@ -15,7 +14,6 @@ app.use(Vue3TouchEvents)
 app.mount('#app')
 
 gsap.registerPlugin(ScrollTrigger, Observer)
-gsap.registerPlugin(ScrollToPlugin)
 gsap.registerPlugin(MotionPathPlugin, TextPlugin)
 gsap.registerPlugin(GSDevTools)
 ScrollTrigger.normalizeScroll(true)
@@ -24,33 +22,19 @@ const skills = document.getElementById('skills')
 const aboutMeTitle = document.querySelector('.about-me__title')
 const aboutMeDescr = document.querySelector('.about-me__descr')
 const contactsDescr = document.querySelector('.contacts__description')
+const burgerLinks = document.querySelectorAll('.burger__link')
+const headerLinks = document.querySelectorAll('.header__link')
 
 gsap.defaults({ ease: 'none' })
 
-// // Header menu skroll
-// let smoother = ScrollSmoother.create({
-//   smooth: 2,
-//   effects: true,
-//   normalizeScroll: true
-// })
-
-// ScrollTrigger.create({
-//   trigger: '#contacts',
-//   pin: true,
-//   start: 'center center',
-//   end: '+=300'
-//   // markers: true
-// })
 function scrollTriggerItem(item) {
   item.addEventListener('click', (event) => {
     event.preventDefault()
     let hash = event.target.attributes.href.value
-    gsap.to(window, { duration: 2, scrollTo: hash })
-    // link.scrollIntoView({ block: href, alignToTop: true, behavior: 'smooth' })
+    let scrollTo = document.querySelector(hash)
+    scrollTo.scrollIntoView({ block: 'start', behavior: 'smooth' })
   })
 }
-const burgerLinks = document.querySelectorAll('.burger__link')
-const headerLinks = document.querySelectorAll('.header__link')
 burgerLinks.forEach((link) => scrollTriggerItem(link))
 headerLinks.forEach((link) => scrollTriggerItem(link))
 
@@ -61,30 +45,30 @@ tl1.to(aboutMeDescr, {
   delay: 0.5,
   text: 'an aspiring Frontend Developer with a strong visual sense and a passion for creating  user-friendly interfaces. Continuously seeking new and innovative solutions, I actively  explore external libraries and integrate AI, including GPT chat, into my projects.'
 })
-const tlSkills = gsap.timeline({
-  scrollTrigger: {
-    trigger: skills,
-    // start: 'top top',
-    // end: 'bottom +=500',
-    scrub: 1
-    // pin: true
-    // markers: true,
-    // animation: 'Tween'
-  }
-})
-gsap.utils.toArray('.skills__item').forEach((title) => {
-  tlSkills.fromTo(title, { xPercent: -20 }, { xPercent: 25 }, 0)
-})
-const tlPort = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#portfolio',
-    scrub: 1
-    // pin: true
-  }
-})
 
-if (!window.matchMedia('(max-width: 560px)').matches) {
+if (window.screen.width > 560) {
+  //animate skills
+  const tlSkills = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#skills',
+      scrub: 1,
+      pin: true,
+      animation: 'Tween'
+    }
+  })
+  gsap.utils.toArray('.skills__item').forEach((title) => {
+    tlSkills.fromTo(title, { xPercent: -20 }, { xPercent: 25 }, 0)
+  })
+
   // анимация портфолио
+  const tlPort = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#portfolio',
+      scrub: 1,
+      pin: true
+    }
+  })
+
   gsap.utils.toArray('.portfolio__item:nth-child(even)').forEach((item) => {
     tlPort.fromTo(
       item,
@@ -104,6 +88,17 @@ if (!window.matchMedia('(max-width: 560px)').matches) {
       { xPercent: 2 },
       0
     )
+  })
+} else {
+  const tlSkills = gsap.timeline({
+    scrollTrigger: {
+      trigger: skills,
+      scrub: 1,
+      pin: false
+    }
+  })
+  gsap.utils.toArray('.skills__item').forEach((title) => {
+    tlSkills.fromTo(title, { xPercent: -25 }, { xPercent: 25 }, 0)
   })
 }
 

@@ -88,6 +88,7 @@
 }
 @media (max-width: 520px) {
   .about-me {
+    margin-top: 90px;
     padding-top: 100px;
     padding-bottom: 60px;
     min-height: 560px;
@@ -105,6 +106,7 @@
 }
 @media (max-width: 410px) {
   .about-me {
+    margin-top: 60px;
     padding-bottom: 30px;
     background-size: cover;
   }

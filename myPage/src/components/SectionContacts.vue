@@ -227,7 +227,6 @@
 }
 @media (max-width:480px) {
     .contacts {
-        padding-top: 60px;
         padding-bottom: 0;
     }
     .contacts__list {

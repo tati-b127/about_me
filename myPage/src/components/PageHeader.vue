@@ -8,6 +8,7 @@
       <nav class="header__nav">
         <ul class="header__list">
           <li class="header__item"><a href="#about-me" class="header__link">About me</a></li>
+          <li class="header__item"><a href="#skills" class="header__link">Skills</a></li>
           <li class="header__item"><a href="#portfolio" class="header__link">Portfolio</a></li>
           <li class="header__item"><a href="#contacts" class="header__link">Contacts</a></li>
         </ul>
@@ -22,6 +23,9 @@
           <ul class="burger__list">
             <li class="burger__item">
               <a href="#about-me" class="burger__link" @click="closeMenu">About me</a>
+            </li>
+            <li class="burger__item">
+              <a href="#skills" class="burger__link" @click="closeMenu">Skills</a>
             </li>
             <li class="burger__item">
               <a href="#portfolio" class="burger__link" @click="closeMenu">Portfolio</a>
@@ -46,17 +50,17 @@ export default defineComponent({
     const showMenu = () => {
       if (!isOpen.value) {
         isOpen.value = true
-        if (window.matchMedia("(max-width: 520px)").matches) {
-        document.body.style.overflowY = 'hidden'
+        if (window.screen.width <= 520) {
+        document.body.style.overflow = 'hidden'
       } 
       } else if (isOpen.value) {
         isOpen.value = false
-        document.body.style.overflowY = 'auto'
+        document.body.style.overflow = 'auto'
       }
     }
     const closeMenu = () => {
       isOpen.value = false
-      document.body.style.overflowY = 'auto'
+      document.body.style.overflow = 'auto'
     }
     watch(isOpen, (value) => {
       isOpen.value = value
@@ -109,7 +113,7 @@ export default defineComponent({
 }
 .burger__menu {
   position: absolute;
-  width: 65vw;
+  width: 70vw;
   height: 800px;
   top: 64px;
   right: -40px;
@@ -197,7 +201,7 @@ export default defineComponent({
     margin-right: 40px;
   }
 }
-@media (max-width: 920px) {
+@media (max-width: 980px) {
   .header {
     min-height: 90px;
     padding-top: 26px;
@@ -207,7 +211,7 @@ export default defineComponent({
     font-size: 18px;
   }
 }
-@media (max-width: 820px) {
+@media (max-width: 880px) {
   .burger {
     display: block;
   }
@@ -237,6 +241,17 @@ export default defineComponent({
     width: 100vw;
     height: calc(100vh - 60px);
     padding: 60px 40px;
+    position: fixed;
+    top: 90px;
+    left: 0;
+  }
+  .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--color-background);
   }
 }
 @media (max-width: 410px) {
@@ -247,7 +262,7 @@ export default defineComponent({
     padding-bottom: 12px;
   }
   .burger__menu {
-    top: 48px;
+    top: 60px;
     height: calc(100vh - 60px);
   }
   .burger__btn {
