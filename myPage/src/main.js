@@ -18,7 +18,6 @@ gsap.registerPlugin(MotionPathPlugin, TextPlugin)
 gsap.registerPlugin(GSDevTools)
 ScrollTrigger.normalizeScroll(true)
 
-const skills = document.getElementById('skills')
 const aboutMeTitle = document.querySelector('.about-me__title')
 const aboutMeDescr = document.querySelector('.about-me__descr')
 const contactsDescr = document.querySelector('.contacts__description')
@@ -92,7 +91,7 @@ if (window.screen.width > 560) {
 } else {
   const tlSkills = gsap.timeline({
     scrollTrigger: {
-      trigger: skills,
+      trigger: '#skills',
       scrub: 1,
       pin: false
     }

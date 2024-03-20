@@ -136,7 +136,8 @@
 }
 .skills__item {
     color: var(--color-9383B8);
-    background-color: var(--color-2A2A3C);
+    background-color: #684e8a;
+    /* border: 2px solid #684e8a; */
     transform: scale(1);
     margin-bottom: 36px;
     margin-right: 50px;
@@ -146,23 +147,17 @@
     position: relative;
     font-size: 48px;
     line-height: 110%;
-    color: var(--color-9383B8);
+    color: var(--color-background);
     font-weight: 300;
     padding: 20px 30px;
     cursor: pointer;
-    background: linear-gradient(60deg, var(--color-17134e), var(--color-9383B8), var(--color-412F74));
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: animate 3s linear infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    /* -webkit-text-fill-color: var(--color-9383B8); */
-    /* animation: titleAnimation 0.2s linear; */
+    /* background-color: var(--color-background); */
+    /* background: linear-gradient(60deg, var(--color-2A2A3C), var(--color-background), var(--color-17134e)); */
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 @keyframes animate {
   0% {
-    background-position: -1000%;
+    background-position: -500%;
   }
   100% {
     background-position: 300%;
@@ -177,12 +172,10 @@
   }
 }
 .skills__item:nth-child(3n) {
-    background-color: var(--color-271939);
-    animation: animate 2s linear infinite 2s;
+    background-color: #745c80;
 }
 .skills__item:nth-child(2n) {
-    background-color: var(--color-412F74);
-    animation: animateHover 3s linear infinite 1s;
+    background-color: #544660;
 }
 .skills__item:hover,
 .skills__item:hover .skills__subtitle {
@@ -191,8 +184,6 @@
     transform: scale(1.1) !important;
     background-color: var(--color-9383B8);
     z-index: 1000;
-    /* animation: reverse; */
-    animation: animateHover 2s linear infinite;
 }
 
 @media (max-width: 1280px) {
