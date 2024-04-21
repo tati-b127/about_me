@@ -4,7 +4,6 @@
       <h1 class="about-me__title"></h1>
       <h2 class="about-me__descr">
       </h2>
-      
     </div>
   </section>
 </template>
@@ -20,11 +19,12 @@
   grid-template-columns: repeat(6, 1fr);
   min-height: 800px;
   padding-top: 100px;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
   background: linear-gradient(#00000000, #00000000,  #00000000, var(--color-background)), url('@/assets/images/photo-bg.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left top;
+  /* transition: all; */
 }
 .about-me__block {
   padding-top: 150px;
@@ -88,7 +88,7 @@
 }
 @media (max-width: 520px) {
   .about-me {
-    margin-top: 90px;
+    margin-top: 60px;
     padding-top: 100px;
     padding-bottom: 60px;
     min-height: 560px;

@@ -41,8 +41,8 @@
 </template>
 <script>
 import { defineComponent, ref, watch } from 'vue'
-const mql = window.matchMedia("(max-width: 410px)")
-console.debug(mql)
+// const mql = window.matchMedia("(max-width: 410px)")
+// console.debug(mql)
 
 export default defineComponent({
   setup() {
@@ -242,10 +242,14 @@ export default defineComponent({
     height: calc(100vh - 60px);
     padding: 60px 40px;
     position: fixed;
-    top: 90px;
+    top: 60px;
     left: 0;
   }
   .header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    min-height: 60px;
+    height: 60px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -255,12 +259,6 @@ export default defineComponent({
   }
 }
 @media (max-width: 410px) {
-  .header {
-    min-height: 60px;
-    height: 60px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
   .burger__menu {
     top: 60px;
     height: calc(100vh - 60px);

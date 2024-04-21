@@ -1,8 +1,12 @@
 <template>
   <section class="skills" id="skills">
     <div class="container section__container">
-        <h2 class="skills__title title">Skills</h2>
-        <ul class="skills__list">
+      <h2 class="skills__title title">Skills</h2>
+      <div class="skills__wrapper">
+        <ul class="skills__list skills__list_1">
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">ES6</h3>
+          </li>
           <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">Vue 2/3</h3>
           </li>
@@ -13,20 +17,31 @@
             <h3 class="skills__subtitle">JavaScript</h3>
           </li>
           <li class="skills__item skills__item_1">
-            <h3 class="skills__subtitle">ES6</h3>
-          </li>
-          <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">HTML5</h3>
-          </li>
-          <li class="skills__item skills__item_1">
-            <h3 class="skills__subtitle">SASS</h3>
-          </li>
-          <li class="skills__item skills__item_1">
-            <h3 class="skills__subtitle">LESS</h3>
           </li>
           <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">TypeScript</h3>
           </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">React</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">REST API</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">Ajax</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">SCSS</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">VUEX</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">Vue-router</h3>
+          </li>
+        </ul>
+        <ul class="skills__list skills__list_2">
           <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">React</h3>
           </li>
@@ -43,7 +58,27 @@
             <h3 class="skills__subtitle">Ajax</h3>
           </li>
           <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">SCSS</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">VUEX</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">Vue-router</h3>
+          </li>
+        </ul>
+        <ul class="skills__list skills__list_3">
+          <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">npm</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">TypeScript</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">VUE</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">Vite</h3>
           </li>
           <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">Gulp</h3>
@@ -55,16 +90,33 @@
             <h3 class="skills__subtitle">Webpack</h3>
           </li>
           <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">SCSS</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">VUEX</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">Vue-router</h3>
+          </li>
+          <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">Parcel</h3>
           </li>
           <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">GITHUB</h3>
           </li>
+        </ul>
+        <ul class="skills__list skills__list_4">
           <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">Pixel Perfect</h3>
           </li>
           <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">BEM</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">TypeScript</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">GITHUB</h3>
           </li>
           <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">SCSS</h3>
@@ -93,7 +145,11 @@
           <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">Vite</h3>
           </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">REST API</h3>
+          </li>
         </ul>
+      </div>
     </div>
   </section>
 </template>
@@ -127,33 +183,77 @@
 } */
 
 .skills {
-    padding-top: 120px;
-    overflow: hidden;
+  padding-top: 120px;
+}
+.skills__wrapper {
+  background-color: #cac7ea;
+  margin: 0 -80px;
+  overflow: hidden;
 }
 .skills__list {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
 }
 .skills__item {
-    color: var(--color-9383B8);
-    background-color: #684e8a;
-    /* border: 2px solid #684e8a; */
-    transform: scale(1);
-    margin-bottom: 36px;
-    margin-right: 50px;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transform: scale(1);
+  text-transform: uppercase;
+  transition:
+    transform 0.3s ease-in-out,
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
 }
 .skills__subtitle {
-    position: relative;
-    font-size: 48px;
-    line-height: 110%;
-    color: var(--color-background);
-    font-weight: 300;
-    padding: 20px 30px;
-    cursor: pointer;
-    /* background-color: var(--color-background); */
-    /* background: linear-gradient(60deg, var(--color-2A2A3C), var(--color-background), var(--color-17134e)); */
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  position: relative;
+  font-size: 3vw;
+  line-height: 110%;
+  color: var(--color-412F74);
+  padding: 10px 20px;
+  cursor: pointer;
+  width: max-content;
+  /* background-color: var(--color-background); */
+  /* background: linear-gradient(60deg, var(--color-2A2A3C), var(--color-background), var(--color-17134e)); */
+  transition:
+    transform 0.3s ease-in-out,
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+.skills__subtitle::before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 0.8vw;
+  height: 0.8vw;
+  border-radius: 50%;
+  left: -12px;
+  bottom: calc(50%);
+  bottom: calc(50% - 2px);
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: var(--color-9383B8);
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+.skills__list_1,
+/* .skills__list_2, */
+.skills__list_3 {
+  direction: rtl;
+}
+.skills__list_1 .skills__subtitle {
+  font-size: 4.5vw;
+}
+.skills__list_2 .skills__subtitle {
+  font-size: 4vw;
+}
+.skills__list_3 .skills__subtitle {
+  font-size: 3.5vw;
+}
+.skills__list_4 .skills__subtitle {
+  font-size: 3vw;
+}
+.skills__list {
+  padding: 20px;
+  background-color: #cac7ea;
 }
 @keyframes animate {
   0% {
@@ -171,49 +271,63 @@
     background-position: 500%;
   }
 }
-.skills__item:nth-child(3n) {
-    background-color: #745c80;
-}
-.skills__item:nth-child(2n) {
-    background-color: #544660;
-}
 .skills__item:hover,
 .skills__item:hover .skills__subtitle {
-    color: var(--color-412F74);
-    font-weight: 500;
-    transform: scale(1.1) !important;
-    background-color: var(--color-9383B8);
-    z-index: 1000;
+  color: var(--color-412F74);
+  transform: scale(1.1) !important;
+  background-color: var(--color-9383B8);
+  z-index: 10;
+}
+.skills__item:hover .skills__subtitle::before {
+  opacity: 0;
 }
 
 @media (max-width: 1280px) {
-
-.skills {
+  .skills {
     padding-top: 80px;
-}
+  }
 }
 @media (max-width: 980px) {
-
-.skills__subtitle {
+  .skills__subtitle {
     font-size: 32px;
-}
+  }
+  .skills__list {
+    padding: 10px;
+  }
 }
 @media (max-width: 590px) {
+  .skills__subtitle {
+    padding: 8px 12px;
+  }
+  .skills__list {
+    padding: 8px;
+  }
+  .skills__list_1 .skills__subtitle {
+  font-size: 5.5vw;
+}
+.skills__list_2 .skills__subtitle {
+  font-size: 5vw;
+}
+.skills__list_3 .skills__subtitle {
+  font-size: 4.5vw;
+}
+.skills__list_4 .skills__subtitle {
+  font-size: 4vw;
+}
 
-.skills__subtitle {
-    font-size: 24px;
-    padding: 10px 20px;
 }
-.skills__item {
-    margin-right: 18px;
-    margin-bottom: 12px;
-}
+@media (max-width: 410px) {
+  .skills__subtitle {
+    padding: 6px 12px;
+  }
+  .skills__list {
+    padding: 4px;
+  }
+
 }
 @media (max-width: 375px) {
-
-.skills__subtitle {
-    font-size: 18px;
+  .skills__subtitle {
     padding: 8px 12px;
-}
+  }
 }
 </style>

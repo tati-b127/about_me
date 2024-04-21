@@ -73,7 +73,7 @@ a {
 }
 body {
   min-width: 320px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   min-height: 100vh;
   color: var(--color-white);
   background: var(--color-background);
@@ -88,4 +88,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.main {
+  max-width: 100vw;
 }

@@ -44,21 +44,42 @@ tl1.to(aboutMeDescr, {
   delay: 0.5,
   text: 'an aspiring Frontend Developer with a strong visual sense and a passion for creating  user-friendly interfaces. Continuously seeking new and innovative solutions, I actively  explore external libraries and integrate AI, including GPT chat, into my projects.'
 })
-
 if (window.screen.width > 560) {
   //animate skills
-  const tlSkills = gsap.timeline({
-    scrollTrigger: {
-      trigger: '#skills',
-      scrub: 1,
-      pin: true,
-      animation: 'Tween'
-    }
-  })
-  gsap.utils.toArray('.skills__item').forEach((title) => {
-    tlSkills.fromTo(title, { xPercent: -20 }, { xPercent: 25 }, 0)
-  })
-
+  // const tlSkills = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: '#skills',
+  //     scrub: 1,
+  //     pin: true,
+  //     animation: 'Tween'
+  //   }
+  // })
+  // gsap.utils.toArray('.skills__item').forEach((title) => {
+  //   tlSkills.fromTo(title, { xPercent: -20 }, { xPercent: 25 }, 0)
+  // })
+  const animateRow = (element, reverse) => {
+    const direction = reverse ? '10%' : '-35%'
+    return gsap.to(element, {
+      scrollTrigger: {
+        trigger: '#skills',
+        start: '-400px bottom',
+        end: 'bottom -400px',
+        scrub: true,
+        toggleActions: 'restart pause reverse pause'
+      },
+      x: direction,
+      ease: 'none',
+      duration: 4000
+    })
+  }
+  animateRow('.skills__list_1', true)
+  animateRow('.skills__list_2')
+  animateRow('.skills__list_3', true)
+  animateRow('.skills__list_4')
+  // const resizeObserver = new ResizeObserver(() => {
+  //   ScrollTrigger.refresh()
+  // })
+  // resizeObserver.observe(document.body)
   // анимация портфолио
   const tlPort = gsap.timeline({
     scrollTrigger: {
@@ -89,16 +110,38 @@ if (window.screen.width > 560) {
     )
   })
 } else {
-  const tlSkills = gsap.timeline({
-    scrollTrigger: {
-      trigger: '#skills',
-      scrub: 1,
-      pin: false
-    }
-  })
-  gsap.utils.toArray('.skills__item').forEach((title) => {
-    tlSkills.fromTo(title, { xPercent: -25 }, { xPercent: 25 }, 0)
-  })
+  const animateRow = (element, reverse) => {
+    const direction = reverse ? '30%' : '-20%'
+    return gsap.to(element, {
+      scrollTrigger: {
+        trigger: '#skills',
+        start: '-300px bottom',
+        end: 'bottom -300px',
+        scrub: true,
+        toggleActions: 'restart pause reverse pause'
+      },
+      x: direction,
+      ease: 'none',
+      duration: 2000
+    })
+  }
+  animateRow('.skills__list_1', true)
+  animateRow('.skills__list_2')
+  animateRow('.skills__list_3', true)
+  animateRow('.skills__list_4')
+
+  console.log(animateRow)
+
+  // const tlSkills = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: '#skills',
+  //     scrub: 1,
+  //     pin: false
+  //   }
+  // })
+  // gsap.utils.toArray('.skills__item').forEach((title) => {
+  //   tlSkills.fromTo(title, { xPercent: -25 }, { xPercent: 25 }, 0)
+  // })
 }
 
 let tl2 = gsap.timeline()

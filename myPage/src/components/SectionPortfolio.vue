@@ -19,260 +19,263 @@ export default defineComponent({
 })
 </script>
 <template>
-  <section class="portfolio container" id="portfolio">
-    <h2 class="portfolio__title title">Portfolio</h2>
-    <ul class="portfolio__list">
-      <li class="portfolio__item portfolio__item_1" v-touch:tap="showDetails">
-        <div class="portfolio__block">
-          <h3 class="portfolio__subtitle title-hidden">Online lingerie store Moire</h3>
-        </div>
-        <div class="portfolio__view" :class="{'move': onTouch}">
-          <h3 class="portfolio__subtitle">Online lingerie store Moire</h3>
-          <ul class="portfolio__stack-list">
-            <li class="portfolio__stack-item">Vue3</li>
-            <li class="portfolio__stack-item">Vuex</li>
-            <li class="portfolio__stack-item">Vue-router</li>
-          </ul>
-          <div class="portfolio__btns">
-            <a href="https://tati-b127.github.io/moire/" target="_blank" class="portfolio__link btn"
-              >WEBSITE</a
-            >
-            <a href="https://github.com/tati-b127/moire" target="_blank" class="portfolio__link btn"
-              >GITHUB</a
-            >
-          </div>
-        </div>
-      </li>
-      <li class="portfolio__item portfolio__item_2" @click="showDetails">
-        <div class="portfolio__block">
-          <h3 class="portfolio__subtitle title-hidden">Online furniture store SitDownPls</h3>
-        </div>
-        <div class="portfolio__view" :class="{'move': onTouch}">
-          <h3 class="portfolio__subtitle">Online furniture store SitDownPls</h3>
-          <ul class="portfolio__stack-list">
-            <li class="portfolio__stack-item">HTML</li>
-            <li class="portfolio__stack-item">SCSS</li>
-            <li class="portfolio__stack-item">JavaScript</li>
-          </ul>
-          <div class="portfolio__btns">
-            <a
-              href="https://tati-b127.github.io/sit_down_pls.github.io/"
-              target="_blank"
-              class="portfolio__link btn"
-              >WEBSITE</a
-            >
-            <a
-              href="https://github.com/tati-b127/sit_down_pls.github.io"
-              target="_blank"
-              class="portfolio__link btn"
-              >GITHUB</a
-            >
-          </div>
-        </div>
-      </li>
-      <li class="portfolio__item portfolio__item_3" @click="showDetails">
-        <div class="portfolio__block">
-          <h3 class="portfolio__subtitle title-hidden">Photo studio High Pass landing page</h3>
-        </div>
-        <div class="portfolio__view" :class="{'move': onTouch}">
-          <h3 class="portfolio__subtitle">Photo studio High Pass landing page</h3>
-          <ul class="portfolio__stack-list">
-            <li class="portfolio__stack-item">Pug</li>
-            <li class="portfolio__stack-item">SCSS</li>
-            <li class="portfolio__stack-item">JavaScript</li>
-          </ul>
-          <div class="portfolio__btns">
-            <a
-              href="https://tati-b127.github.io/high_pass.github.io/"
-              target="_blank"
-              class="portfolio__link btn"
-              >WEBSITE</a
-            >
-            <a
-              href="https://github.com/tati-b127/high_pass.github.io"
-              target="_blank"
-              class="portfolio__link btn"
-              >GITHUB</a
-            >
-          </div>
-        </div>
-      </li>
-      <li class="portfolio__item portfolio__item_4" @click="showDetails">
-        <div class="portfolio__block">
-          <h3 class="portfolio__subtitle title-hidden">Art gallery Blanchard website</h3>
-        </div>
-        <div class="portfolio__view" :class="{'move': onTouch}">
-          <h3 class="portfolio__subtitle">Art gallery Blanchard website</h3>
-          <ul class="portfolio__stack-list">
-            <li class="portfolio__stack-item">HTML</li>
-            <li class="portfolio__stack-item">CSS</li>
-            <li class="portfolio__stack-item">JavaScript</li>
-          </ul>
-          <div class="portfolio__btns">
-            <a
-              href="https://tati-b127.github.io/blanchard_project.github.io/"
-              target="_blank"
-              class="portfolio__link btn"
-              >WEBSITE</a
-            >
-            <a
-              href="https://github.com/tati-b127/blanchard_project.github.io"
-              target="_blank"
-              class="portfolio__link btn"
-              >GITHUB</a
-            >
-          </div>
-        </div>
-      </li>
-      <li class="portfolio__item portfolio__item_5" @click="showDetails">
-        <div class="portfolio__block">
-          <h3 class="portfolio__subtitle title-hidden">Customer database CRM system</h3>
-        </div>
-        <div class="portfolio__view" :class="{'move': onTouch}">
-          <h3 class="portfolio__subtitle">Customer database CRM system</h3>
-          <ul class="portfolio__stack-list">
-            <li class="portfolio__stack-item">JavaScript</li>
-            <li class="portfolio__stack-item">HTML</li>
-            <li class="portfolio__stack-item">CSS</li>
-          </ul>
-          <div class="portfolio__btns">
-            <a
-              href="https://github.com/tati-b127/crm.github.io"
-              target="_blank"
-              class="portfolio__link btn"
-              >GITHUB</a
-            >
-          </div>
-        </div>
-      </li>
-      <li class="portfolio__item portfolio__item_6" @click="showDetails">
-        <div class="portfolio__block">
-          <h3 class="portfolio__subtitle title-hidden">Internet banking with unit and e2e tests</h3>
-        </div>
-        <div class="portfolio__view" :class="{'move': onTouch}">
-          <h3 class="portfolio__subtitle">Internet banking with unit and e2e tests</h3>
-          <ul class="portfolio__stack-list">
-            <li class="portfolio__stack-item">JavaScript</li>
-            <li class="portfolio__stack-item">Jest</li>
-            <li class="portfolio__stack-item">Cypress</li>
-            <li class="portfolio__stack-item">HTML</li>
-            <li class="portfolio__stack-item">CSS</li>
-          </ul>
-          <div class="portfolio__btns">
-            <a
-              href="https://github.com/tati-b127/COIN.github.io"
-              target="_blank"
-              class="portfolio__link btn"
-              >GITHUB</a
-            >
-          </div>
-        </div>
-      </li>
-      <li class="portfolio__item portfolio__item_7" @click="showDetails">
-        <div class="portfolio__block">
-          <h3 class="portfolio__subtitle title-hidden">PLM widget Build Of Product</h3>
-        </div>
-        <div class="portfolio__view" :class="{'move': onTouch}">
-          <h3 class="portfolio__subtitle">PLM widget Build Of Product</h3>
-          <ul class="portfolio__stack-list">
-            <li class="portfolio__stack-item">React</li>
-            <li class="portfolio__stack-item">TypeScript</li>
-            <li class="portfolio__stack-item">SCSS</li>
-          </ul>
-          <div class="portfolio__btns">
-            <a
-              href="https://github.com/tati-b127/BOP.io"
-              target="_blank"
-              class="portfolio__link btn"
-              >GITHUB</a
-            >
-          </div>
-        </div>
-      </li>
-      <li class="portfolio__item portfolio__item_8" @click="showDetails">
-        <div class="portfolio__block">
-          <h3 class="portfolio__subtitle title-hidden">Digital agency website</h3>
-        </div>
-        <div class="portfolio__view" :class="{'move': onTouch}">
-          <h3 class="portfolio__subtitle">Digital agency website</h3>
-          <ul class="portfolio__stack-list">
-            <li class="portfolio__stack-item">JavaScript</li>
-            <li class="portfolio__stack-item">Gulp</li>
-            <li class="portfolio__stack-item">HTML</li>
-            <li class="portfolio__stack-item">SCSS</li>
-          </ul>
-          <div class="portfolio__btns">
-            <a
-              href="https://tati-b127.github.io/vtop3/"
-              target="_blank"
-              class="portfolio__link btn"
-              >WEBSITE</a
-            >
-            <a
-              href="https://github.com/tati-b127/vtop3"
-              target="_blank"
-              class="portfolio__link btn"
-              >GITHUB</a
-            >
-          </div>
-        </div>
-      </li>
-      <li class="portfolio__item portfolio__item_10" @click="showDetails">
-        <div class="portfolio__block">
-          <h3 class="portfolio__subtitle title-hidden">Online Shop Technozavrrr</h3>
-        </div>
-        <div class="portfolio__view" :class="{'move': onTouch}">
-          <h3 class="portfolio__subtitle">Online Shop Technozavrrr</h3>
-          <ul class="portfolio__stack-list">
-            <li class="portfolio__stack-item">Vue2</li>
-            <li class="portfolio__stack-item">Vue-router</li>
-            <li class="portfolio__stack-item">Vuex</li>
-          </ul>
-          <div class="portfolio__btns">
-            <a
-              href="https://tati-b127.github.io/technovavrrr/"
-              target="_blank"
-              class="portfolio__link btn"
-              >WEBSITE</a
-            >
-            <a
-              href="https://github.com/tati-b127/technovavrrr"
-              target="_blank"
-              class="portfolio__link btn"
-              >GITHUB</a
-            >
-          </div>
-        </div>
-      </li>
-      <li class="portfolio__item portfolio__item_9" @click="showDetails">
-        <div class="portfolio__block">
-          <h3 class="portfolio__subtitle title-hidden">SPA STAR WARS</h3>
-        </div>
-        <div class="portfolio__view" :class="{'move': onTouch}">
-          <h3 class="portfolio__subtitle">SPA STAR WARS</h3>
-          <ul class="portfolio__stack-list">
-            <li class="portfolio__stack-item">JavaScript</li>
-            <li class="portfolio__stack-item">HTML</li>
-            <li class="portfolio__stack-item">CSS</li>
-          </ul>
-          <div class="portfolio__btns">
-            <a
-              href="tati-b127.github.io/STRWRS.github.io/"
-              target="_blank"
-              class="portfolio__link btn"
-              >WEBSITE</a
-            >
-            <a
-              href="https://github.com/tati-b127/STRWRS.github.io"
-              target="_blank"
-              class="portfolio__link btn"
-              >GITHUB</a
-            >
-          </div>
-        </div>
-      </li>
+  <section class="portfolio" id="portfolio">
+    <div class="container portfolio__container">
 
-    </ul>
+      <h2 class="portfolio__title title">Portfolio</h2>
+      <ul class="portfolio__list">
+        <li class="portfolio__item portfolio__item_1" v-touch:tap="showDetails">
+          <div class="portfolio__block">
+            <h3 class="portfolio__subtitle title-hidden">Online lingerie store Moire</h3>
+          </div>
+          <div class="portfolio__view" :class="{'move': onTouch}">
+            <h3 class="portfolio__subtitle">Online lingerie store Moire</h3>
+            <ul class="portfolio__stack-list">
+              <li class="portfolio__stack-item">Vue3</li>
+              <li class="portfolio__stack-item">Vuex</li>
+              <li class="portfolio__stack-item">Vue-router</li>
+            </ul>
+            <div class="portfolio__btns">
+              <a href="https://tati-b127.github.io/moire/" target="_blank" class="portfolio__link btn"
+                >WEBSITE</a
+              >
+              <a href="https://github.com/tati-b127/moire" target="_blank" class="portfolio__link btn"
+                >GITHUB</a
+              >
+            </div>
+          </div>
+        </li>
+        <li class="portfolio__item portfolio__item_2" @click="showDetails">
+          <div class="portfolio__block">
+            <h3 class="portfolio__subtitle title-hidden">Online furniture store SitDownPls</h3>
+          </div>
+          <div class="portfolio__view" :class="{'move': onTouch}">
+            <h3 class="portfolio__subtitle">Online furniture store SitDownPls</h3>
+            <ul class="portfolio__stack-list">
+              <li class="portfolio__stack-item">HTML</li>
+              <li class="portfolio__stack-item">SCSS</li>
+              <li class="portfolio__stack-item">JavaScript</li>
+            </ul>
+            <div class="portfolio__btns">
+              <a
+                href="https://tati-b127.github.io/sit_down_pls.github.io/"
+                target="_blank"
+                class="portfolio__link btn"
+                >WEBSITE</a
+              >
+              <a
+                href="https://github.com/tati-b127/sit_down_pls.github.io"
+                target="_blank"
+                class="portfolio__link btn"
+                >GITHUB</a
+              >
+            </div>
+          </div>
+        </li>
+        <li class="portfolio__item portfolio__item_3" @click="showDetails">
+          <div class="portfolio__block">
+            <h3 class="portfolio__subtitle title-hidden">Photo studio High Pass landing page</h3>
+          </div>
+          <div class="portfolio__view" :class="{'move': onTouch}">
+            <h3 class="portfolio__subtitle">Photo studio High Pass landing page</h3>
+            <ul class="portfolio__stack-list">
+              <li class="portfolio__stack-item">Pug</li>
+              <li class="portfolio__stack-item">SCSS</li>
+              <li class="portfolio__stack-item">JavaScript</li>
+            </ul>
+            <div class="portfolio__btns">
+              <a
+                href="https://tati-b127.github.io/high_pass.github.io/"
+                target="_blank"
+                class="portfolio__link btn"
+                >WEBSITE</a
+              >
+              <a
+                href="https://github.com/tati-b127/high_pass.github.io"
+                target="_blank"
+                class="portfolio__link btn"
+                >GITHUB</a
+              >
+            </div>
+          </div>
+        </li>
+        <li class="portfolio__item portfolio__item_4" @click="showDetails">
+          <div class="portfolio__block">
+            <h3 class="portfolio__subtitle title-hidden">Art gallery Blanchard website</h3>
+          </div>
+          <div class="portfolio__view" :class="{'move': onTouch}">
+            <h3 class="portfolio__subtitle">Art gallery Blanchard website</h3>
+            <ul class="portfolio__stack-list">
+              <li class="portfolio__stack-item">HTML</li>
+              <li class="portfolio__stack-item">CSS</li>
+              <li class="portfolio__stack-item">JavaScript</li>
+            </ul>
+            <div class="portfolio__btns">
+              <a
+                href="https://tati-b127.github.io/blanchard_project.github.io/"
+                target="_blank"
+                class="portfolio__link btn"
+                >WEBSITE</a
+              >
+              <a
+                href="https://github.com/tati-b127/blanchard_project.github.io"
+                target="_blank"
+                class="portfolio__link btn"
+                >GITHUB</a
+              >
+            </div>
+          </div>
+        </li>
+        <li class="portfolio__item portfolio__item_5" @click="showDetails">
+          <div class="portfolio__block">
+            <h3 class="portfolio__subtitle title-hidden">Customer database CRM system</h3>
+          </div>
+          <div class="portfolio__view" :class="{'move': onTouch}">
+            <h3 class="portfolio__subtitle">Customer database CRM system</h3>
+            <ul class="portfolio__stack-list">
+              <li class="portfolio__stack-item">JavaScript</li>
+              <li class="portfolio__stack-item">HTML</li>
+              <li class="portfolio__stack-item">CSS</li>
+            </ul>
+            <div class="portfolio__btns">
+              <a
+                href="https://github.com/tati-b127/crm.github.io"
+                target="_blank"
+                class="portfolio__link btn"
+                >GITHUB</a
+              >
+            </div>
+          </div>
+        </li>
+        <li class="portfolio__item portfolio__item_6" @click="showDetails">
+          <div class="portfolio__block">
+            <h3 class="portfolio__subtitle title-hidden">Internet banking with unit and e2e tests</h3>
+          </div>
+          <div class="portfolio__view" :class="{'move': onTouch}">
+            <h3 class="portfolio__subtitle">Internet banking with unit and e2e tests</h3>
+            <ul class="portfolio__stack-list">
+              <li class="portfolio__stack-item">JavaScript</li>
+              <li class="portfolio__stack-item">Jest</li>
+              <li class="portfolio__stack-item">Cypress</li>
+              <li class="portfolio__stack-item">HTML</li>
+              <li class="portfolio__stack-item">CSS</li>
+            </ul>
+            <div class="portfolio__btns">
+              <a
+                href="https://github.com/tati-b127/COIN.github.io"
+                target="_blank"
+                class="portfolio__link btn"
+                >GITHUB</a
+              >
+            </div>
+          </div>
+        </li>
+        <li class="portfolio__item portfolio__item_7" @click="showDetails">
+          <div class="portfolio__block">
+            <h3 class="portfolio__subtitle title-hidden">PLM widget Build Of Product</h3>
+          </div>
+          <div class="portfolio__view" :class="{'move': onTouch}">
+            <h3 class="portfolio__subtitle">PLM widget Build Of Product</h3>
+            <ul class="portfolio__stack-list">
+              <li class="portfolio__stack-item">React</li>
+              <li class="portfolio__stack-item">TypeScript</li>
+              <li class="portfolio__stack-item">SCSS</li>
+            </ul>
+            <div class="portfolio__btns">
+              <a
+                href="https://github.com/tati-b127/BOP.io"
+                target="_blank"
+                class="portfolio__link btn"
+                >GITHUB</a
+              >
+            </div>
+          </div>
+        </li>
+        <li class="portfolio__item portfolio__item_8" @click="showDetails">
+          <div class="portfolio__block">
+            <h3 class="portfolio__subtitle title-hidden">Digital agency website</h3>
+          </div>
+          <div class="portfolio__view" :class="{'move': onTouch}">
+            <h3 class="portfolio__subtitle">Digital agency website</h3>
+            <ul class="portfolio__stack-list">
+              <li class="portfolio__stack-item">JavaScript</li>
+              <li class="portfolio__stack-item">Gulp</li>
+              <li class="portfolio__stack-item">HTML</li>
+              <li class="portfolio__stack-item">SCSS</li>
+            </ul>
+            <div class="portfolio__btns">
+              <a
+                href="https://tati-b127.github.io/vtop3/"
+                target="_blank"
+                class="portfolio__link btn"
+                >WEBSITE</a
+              >
+              <a
+                href="https://github.com/tati-b127/vtop3"
+                target="_blank"
+                class="portfolio__link btn"
+                >GITHUB</a
+              >
+            </div>
+          </div>
+        </li>
+        <li class="portfolio__item portfolio__item_10" @click="showDetails">
+          <div class="portfolio__block">
+            <h3 class="portfolio__subtitle title-hidden">Online Shop Technozavrrr</h3>
+          </div>
+          <div class="portfolio__view" :class="{'move': onTouch}">
+            <h3 class="portfolio__subtitle">Online Shop Technozavrrr</h3>
+            <ul class="portfolio__stack-list">
+              <li class="portfolio__stack-item">Vue2</li>
+              <li class="portfolio__stack-item">Vue-router</li>
+              <li class="portfolio__stack-item">Vuex</li>
+            </ul>
+            <div class="portfolio__btns">
+              <a
+                href="https://tati-b127.github.io/technovavrrr/"
+                target="_blank"
+                class="portfolio__link btn"
+                >WEBSITE</a
+              >
+              <a
+                href="https://github.com/tati-b127/technovavrrr"
+                target="_blank"
+                class="portfolio__link btn"
+                >GITHUB</a
+              >
+            </div>
+          </div>
+        </li>
+        <li class="portfolio__item portfolio__item_9" @click="showDetails">
+          <div class="portfolio__block">
+            <h3 class="portfolio__subtitle title-hidden">SPA STAR WARS</h3>
+          </div>
+          <div class="portfolio__view" :class="{'move': onTouch}">
+            <h3 class="portfolio__subtitle">SPA STAR WARS</h3>
+            <ul class="portfolio__stack-list">
+              <li class="portfolio__stack-item">JavaScript</li>
+              <li class="portfolio__stack-item">HTML</li>
+              <li class="portfolio__stack-item">CSS</li>
+            </ul>
+            <div class="portfolio__btns">
+              <a
+                href="tati-b127.github.io/STRWRS.github.io/"
+                target="_blank"
+                class="portfolio__link btn"
+                >WEBSITE</a
+              >
+              <a
+                href="https://github.com/tati-b127/STRWRS.github.io"
+                target="_blank"
+                class="portfolio__link btn"
+                >GITHUB</a
+              >
+            </div>
+          </div>
+        </li>
+  
+      </ul>
+    </div>
   </section>
 </template>
 <style type="text/css">
