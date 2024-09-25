@@ -259,21 +259,65 @@ export default defineComponent({
             </ul>
             <div class="portfolio__btns">
               <a
-                href="tati-b127.github.io/STRWRS.github.io/"
-                target="_blank"
-                class="portfolio__link btn"
-                >WEBSITE</a
+                  href="https://tati-b127.github.io/STRWRS.github.io"
+                  target="_blank"
+                  class="portfolio__link btn"
+              >WEBSITE</a
               >
               <a
-                href="https://github.com/tati-b127/STRWRS.github.io"
-                target="_blank"
-                class="portfolio__link btn"
-                >GITHUB</a
+                  href="https://github.com/tati-b127/STRWRS.github.io"
+                  target="_blank"
+                  class="portfolio__link btn"
+              >GITHUB</a
               >
             </div>
           </div>
         </li>
-  
+        <li class="portfolio__item portfolio__item_11" @click="showDetails">
+          <div class="portfolio__block">
+            <h3 class="portfolio__subtitle title-hidden">Landing Page create with AI(text, images)</h3>
+          </div>
+          <div class="portfolio__view" :class="{'move': onTouch}">
+            <h3 class="portfolio__subtitle">THE SHAVE</h3>
+            <ul class="portfolio__stack-list">
+              <li class="portfolio__stack-item">JS</li>
+              <li class="portfolio__stack-item">Chat GPT</li>
+              <li class="portfolio__stack-item">HTML</li>
+              <li class="portfolio__stack-item">CSS</li>
+            </ul>
+            <div class="portfolio__btns">
+              <a
+                  href="https://tati-b127.github.io/the_shave/"
+                  target="_blank"
+                  class="portfolio__link btn"
+              >WEBSITE</a
+              >
+            </div>
+          </div>
+        </li>
+        <li class="portfolio__item portfolio__item_12" @click="showDetails">
+          <div class="portfolio__block">
+            <h3 class="portfolio__subtitle title-hidden">Landing Page create with AI(text, images)</h3>
+          </div>
+          <div class="portfolio__view" :class="{'move': onTouch}">
+            <h3 class="portfolio__subtitle">INK RIOT</h3>
+            <ul class="portfolio__stack-list">
+              <li class="portfolio__stack-item">JS</li>
+              <li class="portfolio__stack-item">Chat GPT</li>
+              <li class="portfolio__stack-item">HTML</li>
+              <li class="portfolio__stack-item">SCSS</li>
+            </ul>
+            <div class="portfolio__btns">
+              <a
+                  href="https://tati-b127.github.io/ink_riot/"
+                  target="_blank"
+                  class="portfolio__link btn"
+              >WEBSITE</a
+              >
+            </div>
+          </div>
+        </li>
+
       </ul>
     </div>
   </section>
@@ -286,7 +330,7 @@ export default defineComponent({
 .portfolio__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(12, 130px);
+  grid-template-rows: repeat(14, 130px);
   grid-gap: 30px 60px;
 }
 .portfolio__item {
@@ -397,6 +441,12 @@ export default defineComponent({
 .portfolio__item_10 .portfolio__block {
   background-image: url('@/assets/svg/logo-tech.svg');
 }
+.portfolio__item_11 .portfolio__block {
+  background-image: url('@/assets/svg/logo-shave.svg');
+}
+.portfolio__item_12 .portfolio__block {
+  background-image: url('@/assets/svg/logo-ink.svg');
+}
 .portfolio__item_1 .portfolio__view,
 .portfolio__item_6 .portfolio__view {
   justify-content: center;
@@ -452,12 +502,22 @@ export default defineComponent({
   grid-row: 11 / span 2;
   background-color: var(--color-262425);
 }
+.portfolio__item_11 {
+  grid-column: 1 / span 1;
+  grid-row: 13 / span 2;
+  background-color: #177600;
+}
+.portfolio__item_12 {
+  grid-column: 2 / span 1;
+  grid-row: 13 / span 2;
+  background-color: #7f0793;
+}
 @media (max-width: 1280px) {
   .portfolio {
     padding-top: 80px;
   }
   .portfolio__list {
-    grid-template-rows: repeat(12, 110px);
+    grid-template-rows: repeat(14, 110px);
     grid-gap: 20px 40px;
   }
   .portfolio__view {
@@ -509,7 +569,7 @@ export default defineComponent({
 }
 @media (max-width: 560px) {
   .portfolio__list {
-    grid-template-rows: repeat(10, 200px);
+    grid-template-rows: repeat(12, 200px);
   }
   .portfolio__item_1 {
     grid-column: 1 / span 2;
@@ -550,6 +610,14 @@ export default defineComponent({
   .portfolio__item_10 {
     grid-column: 1 / span 2;
     grid-row: 10 / span 1;
+  }
+  .portfolio__item_11 {
+    grid-column: 1 / span 2;
+    grid-row: 11 / span 1;
+  }
+  .portfolio__item_12 {
+    grid-column: 1 / span 2;
+    grid-row: 12 / span 1;
   }
   .portfolio__stack-list {
     margin-bottom: 0;

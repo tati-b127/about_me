@@ -84,7 +84,10 @@
             <h3 class="skills__subtitle">Gulp</h3>
           </li>
           <li class="skills__item skills__item_1">
-            <h3 class="skills__subtitle">Grund</h3>
+            <h3 class="skills__subtitle">Grunt</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">React</h3>
           </li>
           <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">Webpack</h3>
@@ -117,6 +120,9 @@
           </li>
           <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">GITHUB</h3>
+          </li>
+          <li class="skills__item skills__item_1">
+            <h3 class="skills__subtitle">GitLab</h3>
           </li>
           <li class="skills__item skills__item_1">
             <h3 class="skills__subtitle">SCSS</h3>
@@ -186,7 +192,7 @@
   padding-top: 120px;
 }
 .skills__wrapper {
-  background-color: #cac7ea;
+  background-color: #e0def4;
   margin: 0 -80px;
   overflow: hidden;
 }
@@ -253,7 +259,7 @@
 }
 .skills__list {
   padding: 20px;
-  background-color: #cac7ea;
+  background-color: #e0def4;
 }
 @keyframes animate {
   0% {
